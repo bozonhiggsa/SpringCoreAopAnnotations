@@ -12,7 +12,7 @@ public class AopDeveloperRunner {
     public static void main(String[] args) {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("aop-developer-annotations-config.xml");
-        System.out.println("Spring context created");
+        System.out.println("Spring context was created");
 
         Developer developer = (Developer) context.getBean("developer");
 
