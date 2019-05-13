@@ -16,8 +16,17 @@ public class AopDeveloperRunner {
 
         Developer developer = (Developer) context.getBean("developer");
 
+        System.out.println("-----------------------------");
+        // implicit invoke .toString() method
         System.out.println(developer);
-
-        developer.throwSomeMysticException();
+        System.out.println("-----------------------------");
+        developer.someMethod();
+        System.out.println("-----------------------------");
+        try{
+            developer.throwSomeMysticException();
+        }
+        catch (Exception e){
+            /*NOP*/
+        }
     }
 }
